@@ -1,5 +1,11 @@
 [Quokka.js plugin](https://quokkajs.com/) to enable browser-like environment via [`jsdom`](https://github.com/tmpvar/jsdom).
 
+## Install
+
+```
+npm install jsdom-quokka-plugin
+```
+
 ## Configuration
 
 Available [configuration settings](https://quokkajs.com/docs/configuration.html):
