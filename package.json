@@ -1,0 +1,26 @@
+{
+  "name": "jsdom-quokka-plugin",
+  "version": "1.0.0",
+  "description": "Quokka plugin to enable browser environment via jsdom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallabyjs/jsdom-quokka-plugin.git"
+  },
+  "keywords": [
+    "Quokka.js",
+    "Wallaby.js"
+  ],
+  "author": "Artem Govorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wallabyjs/jsdom-quokka-plugin/issues"
+  },
+  "homepage": "https://github.com/wallabyjs/jsdom-quokka-plugin#readme",
+  "dependencies": {
+    "jsdom": "^9.11.0"
+  }
+}
