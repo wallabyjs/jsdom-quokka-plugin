@@ -4,7 +4,7 @@
 
 Available [configuration settings](https://quokkajs.com/docs/configuration.html):
 
-```json
+```
 {
     "plugins": ["jsdom-quokka-plugin"],
     "jsdom": {
