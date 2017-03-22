@@ -15,5 +15,9 @@ module.exports = {
     global.navigator = {
       userAgent: pluginConfig.userAgent || 'quokka.js'
     };
+
+    if (!console.debug) {
+      console.debug = console.log;
+    }
   }
 };
