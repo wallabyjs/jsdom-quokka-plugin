@@ -2,9 +2,7 @@ module.exports = {
   before: config => {
     const pluginConfig = config.jsdom || {};
     const jsdomConfig = pluginConfig.config || {};
-    const html = pluginConfig.html || '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>';
-    pluginConfig.stubExt = pluginConfig.stubExt ||
-      ['.png', '.svg', '.ico', 'jpeg', '.jpg', '.css', '.less', '.scss', '.sass'];
+    const html = pluginConfig.html || '<!doctype html><html><head><meta charset="utf-8"></head><body><div id="root"></div></body></html>';
     const jsdom = require('jsdom');
     const document = jsdom.jsdom(html, jsdomConfig);
 
