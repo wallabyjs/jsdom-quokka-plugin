@@ -3,7 +3,7 @@ module.exports = {
     const pluginConfig = config.jsdom || {};
     const jsdomConfig = pluginConfig.config || {};
     const html = pluginConfig.html || '<!doctype html><html><head><meta charset="utf-8"></head><body><div id="root"></div></body></html>';
-    const jsdom = require('jsdom');
+    const jsdom = require('jsdom/lib/old-api.js');
     const document = jsdom.jsdom(html, jsdomConfig);
 
     Object.keys(document.defaultView).forEach((property) => {

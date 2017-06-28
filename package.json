@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/wallabyjs/jsdom-quokka-plugin#readme",
   "dependencies": {
-    "jsdom": "^9.11.0"
+    "jsdom": "^11.0.0"
   }
 }
