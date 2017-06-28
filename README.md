@@ -21,4 +21,4 @@ Available [configuration settings](https://quokkajs.com/docs/configuration.html)
 }
 ```
 
-The `config` setting is [the `jsdom` config setting](https://github.com/tmpvar/jsdom).
+The `config` setting is [the `jsdom` config setting](https://github.com/tmpvar/jsdom/blob/master/lib/old-api.md#how-it-works).
