@@ -9,17 +9,17 @@ module.exports = {
     const document = jsdom.jsdom(html, jsdomConfig);
 
     Object.keys(document.defaultView).forEach((property) => {
-        if (typeof global[property] === 'undefined') {
-            global[property] = document.defaultView[property];
-        }
+      if (typeof global[property] === 'undefined') {
+        global[property] = document.defaultView[property];
+      }
     });
 
     global.navigator = {
-        userAgent: pluginConfig.userAgent || 'quokka.js'
+      userAgent: pluginConfig.userAgent || 'quokka.js'
     };
 
     if (!console.debug) {
-        console.debug = console.log;
+      console.debug = console.log;
     }
   }
 };
