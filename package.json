@@ -1,6 +1,6 @@
 {
   "name": "jsdom-quokka-plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Quokka plugin to enable browser environment via jsdom",
   "main": "index.js",
   "scripts": {
