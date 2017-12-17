@@ -20,8 +20,44 @@ module.exports = {
       userAgent: pluginConfig.userAgent || 'quokka.js'
     };
 
+    if(!global.localStorage){
+      global.localStorage = mockLocalStorage;
+    }
+    if(!global.sessionStorage){
+      global.sessionStorage = mockSessionStorage;
+    }
+
     if (!console.debug) {
       console.debug = console.log;
     }
   }
 };
+
+const localStorageContent = {};
+const mockLocalStorage = {
+    setItem: function(key, value){
+        localStorageContent[key] = value;
+    },
+    getItem: function(key){
+        return key in localStorageContent ? localStorageContent[key ]: null;
+    },
+    removeItem: function(key){
+        return delete localStorageContent[key]
+    }
+}
+
+let sessionStorageContent  = {};
+const mockSessionStorage = {
+    setItem: function(key, value){
+        sessionStorageContent[key] = value + '';
+    },
+    getItem: function(key){
+        return key in sessionStorageContent ? sessionStorageContent[key] : null;
+    },
+    removeItem: function(key){
+        return delete sessionStorageContent[key]
+    },
+    clear: function(){
+        sessionStorageContent = {};
+    }
+}
