@@ -20,10 +20,10 @@ module.exports = {
       userAgent: pluginConfig.userAgent || 'quokka.js'
     };
 
-    if(!global.localStorage){
+    if (!global.localStorage) {
       global.localStorage = mockLocalStorage;
     }
-    if(!global.sessionStorage){
+    if (!global.sessionStorage) {
       global.sessionStorage = mockSessionStorage;
     }
 
@@ -35,29 +35,29 @@ module.exports = {
 
 const localStorageContent = {};
 const mockLocalStorage = {
-    setItem: function(key, value){
-        localStorageContent[key] = value;
-    },
-    getItem: function(key){
-        return key in localStorageContent ? localStorageContent[key ]: null;
-    },
-    removeItem: function(key){
-        return delete localStorageContent[key]
-    }
-}
+  setItem: function (key, value) {
+    localStorageContent[key] = value;
+  },
+  getItem: function (key) {
+    return key in localStorageContent ? localStorageContent[key] : null;
+  },
+  removeItem: function (key) {
+    return delete localStorageContent[key]
+  }
+};
 
-let sessionStorageContent  = {};
+let sessionStorageContent = {};
 const mockSessionStorage = {
-    setItem: function(key, value){
-        sessionStorageContent[key] = value + '';
-    },
-    getItem: function(key){
-        return key in sessionStorageContent ? sessionStorageContent[key] : null;
-    },
-    removeItem: function(key){
-        return delete sessionStorageContent[key]
-    },
-    clear: function(){
-        sessionStorageContent = {};
-    }
-}
+  setItem: function (key, value) {
+    sessionStorageContent[key] = value + '';
+  },
+  getItem: function (key) {
+    return key in sessionStorageContent ? sessionStorageContent[key] : null;
+  },
+  removeItem: function (key) {
+    return delete sessionStorageContent[key]
+  },
+  clear: function () {
+    sessionStorageContent = {};
+  }
+};
