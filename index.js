@@ -9,7 +9,7 @@ module.exports = {
     const document = jsdom.jsdom(html, jsdomConfig);
 
     Object.getOwnPropertyNames(document.defaultView)
-      .concat(Object.getOwnPropertyNames(document.defaultView._core))
+      .concat(Object.getOwnPropertyNames(document.defaultView._core || {}))
       .forEach((property) => {
         if (property !== 'root' && typeof global[property] === 'undefined') {
           global[property] = document.defaultView[property];
