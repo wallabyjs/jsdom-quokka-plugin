@@ -8,7 +8,15 @@ npm install jsdom-quokka-plugin
 
 ## Configuration
 
-Available [configuration settings](https://quokkajs.com/docs/configuration.html):
+Specify the plugin in Quokka [configuration settings](https://quokkajs.com/docs/configuration.html)
+
+```
+{
+    "plugins": ["jsdom-quokka-plugin"]
+}
+```
+
+If you need to, you may pass additinal configuration options to the plugin:
 
 ```
 {
