@@ -1,5 +1,6 @@
 module.exports = {
   before: config => {
+    const properties = require('./properties');
     const fs = require('fs');
     const pluginConfig = config.jsdom || {};
     const jsdomConfig = pluginConfig.config || {};
@@ -8,13 +9,11 @@ module.exports = {
     const jsdom = require('jsdom/lib/old-api.js');
     const document = jsdom.jsdom(html, jsdomConfig);
 
-    Object.getOwnPropertyNames(document.defaultView)
-      .concat(Object.getOwnPropertyNames(document.defaultView._core || {}))
-      .forEach((property) => {
-        if (property !== 'root' && typeof global[property] === 'undefined') {
-          global[property] = document.defaultView[property];
-        }
-      });
+    properties.forEach((property) => {
+      if (property !== 'root' && typeof global[property] === 'undefined') {
+        global[property] = document.defaultView[property];
+      }
+    });
 
     global.navigator = {
       userAgent: pluginConfig.userAgent || 'quokka.js'
