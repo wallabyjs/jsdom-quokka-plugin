@@ -22,6 +22,7 @@ If you need to, you may pass additinal configuration options to the plugin:
 {
     "plugins": ["jsdom-quokka-plugin"],
     "jsdom": {
+        "file": "/html/file/path"
         "html": "...",
         "userAgent": "...",
         "config": {...}
