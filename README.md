@@ -16,7 +16,7 @@ Specify the plugin in Quokka [configuration settings](https://quokkajs.com/docs/
 }
 ```
 
-If you need to, you may pass additinal configuration options to the plugin:
+If you need to, you may pass additional configuration options to the plugin:
 
 ```
 {
