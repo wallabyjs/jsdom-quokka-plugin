@@ -6,6 +6,8 @@
 npm install jsdom-quokka-plugin
 ```
 
+Note that you may install the plugin to the [Quokka config folder](https://quokkajs.com/docs/configuration.html#global-config-file) instead of installing it to your local project.
+
 ## Configuration
 
 Specify the plugin in Quokka [configuration settings](https://quokkajs.com/docs/configuration.html):
@@ -30,7 +32,11 @@ If you need to, you may pass additional configuration options to the plugin:
 }
 ```
 
-The `config` setting is [the `jsdom` config setting](https://github.com/tmpvar/jsdom/blob/master/lib/old-api.md#how-it-works).
+The `jsdom.file` setting allows to specify a path to any HTML file.
+
+The `jsdom.html` setting allows to specify any HTML as a string.
+
+The `jsdom.config` setting is [the `jsdom` config setting](https://github.com/tmpvar/jsdom/blob/master/lib/old-api.md#how-it-works).
 
 ## Example
 
