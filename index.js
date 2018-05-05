@@ -4,7 +4,7 @@ module.exports = {
     const fs = require('fs');
     const pluginConfig = config.jsdom || {};
     const jsdomConfig = pluginConfig.config || {};
-    const fileData = jsdomConfig.file && fs.readFileSync(jsdomConfig.file).toString();
+    const fileData = (pluginConfig.file || jsdomConfig.file) && fs.readFileSync(pluginConfig.file || jsdomConfig.file).toString();
     const html = fileData || pluginConfig.html || '<!doctype html><html><head><meta charset="utf-8"></head><body><div id="root"></div></body></html>';
     const jsdom = require('jsdom/lib/old-api.js');
     const document = jsdom.jsdom(html, jsdomConfig);
