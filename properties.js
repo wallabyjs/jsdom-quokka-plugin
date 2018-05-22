@@ -32,6 +32,7 @@ module.exports = [
   'FocusEvent',
   'PopStateEvent',
   'UIEvent',
+  'MutationObserver',
   'MouseEvent',
   'KeyboardEvent',
   'TouchEvent',
