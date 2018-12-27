@@ -1,6 +1,6 @@
 {
   "name": "jsdom-quokka-plugin",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Quokka plugin to enable browser environment via jsdom",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/wallabyjs/jsdom-quokka-plugin#readme",
   "dependencies": {
-    "jsdom": "^11.0.0"
+    "jsdom": "^13.1.0"
   }
 }
