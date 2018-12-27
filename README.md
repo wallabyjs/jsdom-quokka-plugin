@@ -36,7 +36,7 @@ The `jsdom.file` setting allows to specify a path to any HTML file.
 
 The `jsdom.html` setting allows to specify any HTML as a string.
 
-The `jsdom.config` setting is [the `jsdom` config setting](https://github.com/tmpvar/jsdom/blob/master/lib/old-api.md#how-it-works).
+The `jsdom.config` setting is [the `jsdom` options setting](https://github.com/jsdom/jsdom#customizing-jsdom).
 
 ## Example
 
