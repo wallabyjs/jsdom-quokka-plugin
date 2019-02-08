@@ -44,7 +44,7 @@ For example, running Quokka on a file like
 
 ```javascript
 ({
-    plugins: 'jsdom-quokka-plugin',
+    plugins: ['jsdom-quokka-plugin'],
     jsdom: {html: `<div id="test">Hello</div>`}
 })
 
