@@ -38,6 +38,11 @@ The `jsdom.html` setting allows to specify any HTML as a string.
 
 The `jsdom.config` setting is [the `jsdom` options setting](https://github.com/jsdom/jsdom#customizing-jsdom).
 
+## Web Canvas API
+
+If you want to use `HTMLCanvasElement` objects with Quokka and `jsdom` then you must also install the `canvas` package in the same
+ location as `jsdom-quokka-plugin`:
+
 ## Example
 
 For example, running Quokka on a file like
