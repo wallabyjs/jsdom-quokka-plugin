@@ -2,10 +2,23 @@ module.exports = {
   before: config => {
     const properties = require('./properties');
     const fs = require('fs');
+    const path = require('path');
     const pluginConfig = config.jsdom || {};
     const jsdomConfig = pluginConfig.config || {};
     jsdomConfig.url = jsdomConfig.url || 'http://localhost/';
-    const fileData = (pluginConfig.file || jsdomConfig.file) && fs.readFileSync(pluginConfig.file || jsdomConfig.file).toString();
+
+    let fileData = (pluginConfig.file || jsdomConfig.file) && fs.readFileSync(pluginConfig.file || jsdomConfig.file).toString();
+    if (!fileData && config.filePath) {
+      const htmlFileWithTheSameName = config.filePath.replace(/\.[^.]+$/, '.html');
+      if (fs.existsSync(htmlFileWithTheSameName)) {
+        fileData = fs.readFileSync(htmlFileWithTheSameName).toString();
+      } else {
+        const indexHtmlFileInTheSameFolder = path.join(path.dirname(config.filePath), 'index.html');
+        if (fs.existsSync(indexHtmlFileInTheSameFolder)) {
+          fileData = fs.readFileSync(indexHtmlFileInTheSameFolder).toString();
+        }
+      }
+    }
     const html = fileData || pluginConfig.html || '<!doctype html><html><head><meta charset="utf-8"></head><body><div id="root"></div></body></html>';
     const jsdom = require('jsdom');
     const document = new jsdom.JSDOM(html, jsdomConfig).window.document;
