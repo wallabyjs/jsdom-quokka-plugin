@@ -222,6 +222,8 @@ module.exports = [
   'prompt',
   'resizeBy',
   'resizeTo',
+  'requestAnimationFrame',
+  'cancelAnimationFrame',
   'scroll',
   'scrollBy',
   'scrollTo'
