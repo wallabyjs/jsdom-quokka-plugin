@@ -1,5 +1,13 @@
 :warning: Please note that this package is no longer requried to use the latest version of Quokka with jsdom. Please refer to [Quokka docs](https://quokkajs.com/docs/configuration.html#jsdom) for more information. :warning:
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+# FOR LEGACY USERS ONLY
+
 -----
 
 [Quokka.js plugin](https://quokkajs.com/) to enable browser-like environment via [`jsdom`](https://github.com/tmpvar/jsdom).
